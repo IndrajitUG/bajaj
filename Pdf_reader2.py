@@ -125,7 +125,7 @@ if __name__ == "__main__":
         st.session_state['vs'] = None
 
     st.image(logo, width=130)
-    st.header("Document Analysis GPT")
+    st.header("Bajaj GPT")
 
     #with st.sidebar:
         #uploaded_file = st.file_uploader('Upload a file: ', type=['pdf', 'docx', 'txt'])
