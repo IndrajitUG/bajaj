@@ -26,7 +26,7 @@ logo_url = "https://waterfieldadvisors.com/frontend/img/logo.webp"
 if os.path.exists(logo_path):
     logo = Image.open(logo_path)
 else:
-    #logo = logo_url
+    logo = logo_url
 
 messages = [
     SystemMessagePromptTemplate.from_template(system_template),
