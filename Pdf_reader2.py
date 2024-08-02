@@ -20,12 +20,12 @@ user_template = '''
 Question: ```{question}```
 '''
 
-#logo_path = "./bajaj.png"
-#logo_url = "https://w7.pngwing.com/pngs/552/21/png-transparent-bajaj-auto-logo-motorcycle-company-company-logo-blue-text-trademark.png"
+logo_path = "./waterfield.webp"
+logo_url = "https://waterfieldadvisors.com/frontend/img/logo.webp"
 
-#if os.path.exists(logo_path):
-    #logo = Image.open(logo_path)
-#else:
+if os.path.exists(logo_path):
+    logo = Image.open(logo_path)
+else:
     #logo = logo_url
 
 messages = [
@@ -124,8 +124,8 @@ if __name__ == "__main__":
     if 'vs' not in st.session_state:
         st.session_state['vs'] = None
 
-    #st.image(logo, width=130)
-    st.header("PDF GPT")
+    st.image(logo, width=130)
+    st.header("WaterField GPT")
 
     #with st.sidebar:
         #uploaded_file = st.file_uploader('Upload a file: ', type=['pdf', 'docx', 'txt'])
