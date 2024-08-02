@@ -119,7 +119,7 @@ if __name__ == "__main__":
     from dotenv import load_dotenv, find_dotenv
     load_dotenv(find_dotenv(), override=True)
 
-    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.5)
+    llm = ChatOpenAI(model="gpt-4o", temperature=0.3)
 
     if 'vs' not in st.session_state:
         st.session_state['vs'] = None
