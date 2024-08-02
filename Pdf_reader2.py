@@ -23,10 +23,10 @@ Question: ```{question}```
 #logo_path = "./bajaj.png"
 #logo_url = "https://w7.pngwing.com/pngs/552/21/png-transparent-bajaj-auto-logo-motorcycle-company-company-logo-blue-text-trademark.png"
 
-if os.path.exists(logo_path):
-    logo = Image.open(logo_path)
-else:
-    logo = logo_url
+#if os.path.exists(logo_path):
+    #logo = Image.open(logo_path)
+#else:
+    #logo = logo_url
 
 messages = [
     SystemMessagePromptTemplate.from_template(system_template),
