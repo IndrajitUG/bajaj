@@ -127,19 +127,19 @@ if __name__ == "__main__":
     st.image(logo, width=130)
     st.header("Waterfield GPT")
 
-    #with st.sidebar:
-        #uploaded_file = st.file_uploader('Upload a file: ', type=['pdf', 'docx', 'txt'])
-        #add_data = st.button("Add Data",on_click= clear_history)
+    with st.sidebar:
+        uploaded_file = st.file_uploader('Upload a file: ', type=['pdf', 'docx', 'txt'])
+        add_data = st.button("Add Data",on_click= clear_history)
 
-        #if uploaded_file and add_data:
-            #with st.spinner("Reading and embedding file..."):
-                #file_path = save_uploaded_file(uploaded_file)
-                #data = load_documents(file_path)
-                #if data is not None:
-                    #chunks = chunk_data(data)
-                    #vector_store = create_embedding_pinecone(chunks)
-                    #st.session_state['vs'] = vector_store
-                #st.success('File uploaded and embedded successfully...')
+        if uploaded_file and add_data:
+            with st.spinner("Reading and embedding file..."):
+                file_path = save_uploaded_file(uploaded_file)
+                data = load_documents(file_path)
+                if data is not None:
+                    chunks = chunk_data(data)
+                    vector_store = create_embedding_pinecone(chunks)
+                    st.session_state['vs'] = vector_store
+                st.success('File uploaded and embedded successfully...')
 
     q = st.text_input("Enter the question")
     submit = st.button("Submit")
